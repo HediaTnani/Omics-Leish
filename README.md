@@ -87,3 +87,6 @@ def parser(compound_file):
     result.columns = ['Map', 'Pathway']
     return result
 ```
+## Results
+
+Bigg_id --> Kegg_compound -->  Map + Pathway
