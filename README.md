@@ -10,10 +10,10 @@ def extract_metabolites(x):
     return(a)
 ```
 ```
-def extract_reactions(x):
+def extract_reactions1(x):
     b = []
     for r in x.reactions:
-        b.append(r.id)
+        b.append([r.id, r.reaction])
     return(b)
 ```
 ```
@@ -21,6 +21,14 @@ def extract_genes(x):
     c = []
     for g in x.genes:
         c.append(g.id)
+    return(c)
+```
+```
+def extract_genes1(x):
+    c = []
+    for g in x.genes:
+        reactionsid = [r.id for r in g.reactions]
+        c.append([g.id, reactionsid])
     return(c)
 ```
 ## Parsing the Kegg API
